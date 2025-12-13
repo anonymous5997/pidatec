@@ -1,0 +1,172 @@
+import { motion } from "framer-motion";
+import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from "lucide-react";
+
+export default function Footer() {
+  const socialLinks = [
+    { icon: Facebook, label: "Facebook" },
+    { icon: Twitter, label: "Twitter" },
+    { icon: Linkedin, label: "LinkedIn" },
+    { icon: Instagram, label: "Instagram" },
+  ];
+
+  const quickLinks = [
+    "About Us",
+    "Courses",
+    "Instructors",
+    "Testimonials",
+    "Blog",
+    "Contact",
+  ];
+
+  const policies = ["Privacy Policy", "Terms of Service", "FAQs", "Support"];
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 },
+    },
+  };
+
+  return (
+    <footer className="bg-pidatec-purple text-white py-16 px-6 md:px-12">
+      <div className="max-w-7xl mx-auto">
+        {/* Main footer content */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12"
+        >
+          {/* Brand */}
+          <motion.div variants={itemVariants} className="col-span-1">
+            <h3 className="text-2xl font-bold font-montserrat mb-4">Pidatec</h3>
+            <p className="text-gray-300 font-poppins mb-6">
+              Empowering the next generation of tech professionals with
+              industry-leading training.
+            </p>
+            {/* Social links */}
+            <div className="flex gap-4">
+              {socialLinks.map((social) => {
+                const Icon = social.icon;
+                return (
+                  <motion.button
+                    key={social.label}
+                    whileHover={{ scale: 1.2, rotate: 5 }}
+                    className="p-2 rounded-full bg-pidatec-turquoise/20 hover:bg-pidatec-pink text-pidatec-turquoise hover:text-white transition-all duration-300"
+                  >
+                    <Icon className="w-5 h-5" />
+                  </motion.button>
+                );
+              })}
+            </div>
+          </motion.div>
+
+          {/* Quick Links */}
+          <motion.div variants={itemVariants} className="col-span-1">
+            <h4 className="text-lg font-bold font-montserrat mb-6">
+              Quick Links
+            </h4>
+            <ul className="space-y-3">
+              {quickLinks.map((link) => (
+                <li key={link}>
+                  <motion.a
+                    href="#"
+                    whileHover={{ x: 5, color: "#40Bf8A" }}
+                    className="text-gray-300 hover:text-pidatec-turquoise font-poppins transition-colors duration-300"
+                  >
+                    {link}
+                  </motion.a>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+
+          {/* Policies */}
+          <motion.div variants={itemVariants} className="col-span-1">
+            <h4 className="text-lg font-bold font-montserrat mb-6">
+              Resources
+            </h4>
+            <ul className="space-y-3">
+              {policies.map((policy) => (
+                <li key={policy}>
+                  <motion.a
+                    href="#"
+                    whileHover={{ x: 5, color: "#40Bf8A" }}
+                    className="text-gray-300 hover:text-pidatec-turquoise font-poppins transition-colors duration-300"
+                  >
+                    {policy}
+                  </motion.a>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+
+          {/* Contact Info */}
+          <motion.div variants={itemVariants} className="col-span-1">
+            <h4 className="text-lg font-bold font-montserrat mb-6">
+              Get in Touch
+            </h4>
+            <div className="space-y-4">
+              <motion.div
+                whileHover={{ x: 5 }}
+                className="flex items-center gap-3 text-gray-300 hover:text-pidatec-turquoise transition-colors duration-300 cursor-pointer"
+              >
+                <Mail className="w-5 h-5 flex-shrink-0 text-pidatec-turquoise" />
+                <span className="font-poppins">hello@pidatec.com</span>
+              </motion.div>
+
+              <motion.div
+                whileHover={{ x: 5 }}
+                className="flex items-center gap-3 text-gray-300 hover:text-pidatec-turquoise transition-colors duration-300 cursor-pointer"
+              >
+                <Phone className="w-5 h-5 flex-shrink-0 text-pidatec-turquoise" />
+                <span className="font-poppins">+1 (555) 123-4567</span>
+              </motion.div>
+
+              <motion.div
+                whileHover={{ x: 5 }}
+                className="flex items-start gap-3 text-gray-300 hover:text-pidatec-turquoise transition-colors duration-300 cursor-pointer"
+              >
+                <MapPin className="w-5 h-5 flex-shrink-0 text-pidatec-turquoise mt-1" />
+                <span className="font-poppins">
+                  123 Tech Avenue, San Francisco, CA 94105
+                </span>
+              </motion.div>
+            </div>
+          </motion.div>
+        </motion.div>
+
+        {/* Divider */}
+        <div className="h-px bg-gradient-to-r from-transparent via-pidatec-turquoise to-transparent mb-8" />
+
+        {/* Bottom footer */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          viewport={{ once: true }}
+          className="text-center text-gray-400 font-poppins"
+        >
+          <p>
+            © 2024 Pidatec. All rights reserved. Building the future, one skill
+            at a time.
+          </p>
+        </motion.div>
+      </div>
+    </footer>
+  );
+}
