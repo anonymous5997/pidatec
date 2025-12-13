@@ -59,6 +59,13 @@
     --sidebar-border: 220 13% 91%;
 
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Pidatec Brand Colors */
+    --pidatec-turquoise: 160 60% 58%;
+    --pidatec-purple: 279 55% 21%;
+    --pidatec-pink: 347 84% 54%;
+    --pidatec-orange: 22 91% 58%;
+    --pidatec-yellow: 42 88% 57%;
   }
 
   .dark {
