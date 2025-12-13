@@ -31,9 +31,21 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-br from-pidatec-purple via-pidatec-pink to-pidatec-orange opacity-90" />
 
       {/* Floating particles */}
-      <div className="particle absolute top-10 left-10 w-64 h-64 bg-pidatec-turquoise rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float" />
-      <div className="particle absolute -bottom-20 right-10 w-96 h-96 bg-pidatec-yellow rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float animation-delay-2000" />
-      <div className="particle absolute top-1/2 left-1/3 w-80 h-80 bg-pidatec-pink rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-float animation-delay-4000" />
+      <motion.div
+        className="particle absolute top-10 left-10 w-64 h-64 bg-pidatec-turquoise rounded-full mix-blend-multiply filter blur-3xl opacity-20"
+        animate={{ y: [0, -10, 0] }}
+        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <motion.div
+        className="particle absolute -bottom-20 right-10 w-96 h-96 bg-pidatec-yellow rounded-full mix-blend-multiply filter blur-3xl opacity-20"
+        animate={{ y: [0, -10, 0] }}
+        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.7 }}
+      />
+      <motion.div
+        className="particle absolute top-1/2 left-1/3 w-80 h-80 bg-pidatec-pink rounded-full mix-blend-multiply filter blur-3xl opacity-10"
+        animate={{ y: [0, -10, 0] }}
+        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1.4 }}
+      />
 
       {/* Content */}
       <div className="relative z-10 text-center text-white px-6 max-w-4xl mx-auto">
