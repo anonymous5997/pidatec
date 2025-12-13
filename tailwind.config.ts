@@ -57,6 +57,13 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        pidatec: {
+          turquoise: "hsl(var(--pidatec-turquoise))",
+          purple: "hsl(var(--pidatec-purple))",
+          pink: "hsl(var(--pidatec-pink))",
+          orange: "hsl(var(--pidatec-orange))",
+          yellow: "hsl(var(--pidatec-yellow))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
