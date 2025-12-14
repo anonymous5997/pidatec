@@ -53,7 +53,13 @@ export default function Footer() {
         >
           {/* Brand */}
           <motion.div variants={itemVariants} className="col-span-1">
-            <h3 className="text-2xl font-bold font-montserrat mb-4">Pidatec</h3>
+            <div className="mb-4">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F172b15ac9718458aa01c370ab6e1a4cf%2Fe25ac19c5d9a473897e40d7873f5ae20?format=webp&width=800"
+                alt="Pidatec Logo"
+                className="h-16 w-auto mb-4"
+              />
+            </div>
             <p className="text-gray-300 font-poppins mb-6">
               Empowering the next generation of tech professionals with
               industry-leading training.
