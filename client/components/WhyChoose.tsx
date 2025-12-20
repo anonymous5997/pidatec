@@ -72,7 +72,7 @@ export default function WhyChoose() {
   };
 
   return (
-    <section className="py-20 px-6 md:px-12 bg-white">
+    <section id="why-us" className="py-20 px-6 md:px-12 bg-white">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
