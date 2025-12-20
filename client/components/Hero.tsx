@@ -86,6 +86,12 @@ export default function Hero() {
 
           {/* Secondary Button */}
           <motion.button
+            onClick={() => {
+              const coursesSection = document.getElementById("courses");
+              if (coursesSection) {
+                coursesSection.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="px-8 py-4 border-2 border-pidatec-turquoise text-pidatec-turquoise font-bold font-poppins rounded-lg transition-all duration-300 hover:bg-pidatec-turquoise hover:text-pidatec-purple"
