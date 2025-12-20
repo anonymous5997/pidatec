@@ -55,7 +55,7 @@ export default function Footer() {
           <motion.div variants={itemVariants} className="col-span-1">
             <div className="mb-4">
               <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F172b15ac9718458aa01c370ab6e1a4cf%2Fe25ac19c5d9a473897e40d7873f5ae20?format=webp&width=800"
+                src="https://cdn.builder.io/api/v1/image/assets%2F172b15ac9718458aa01c370ab6e1a4cf%2F0ae509ce36f74a448d3e1cd12c31934e?format=webp&width=800"
                 alt="Pidatec Logo"
                 className="h-16 w-auto mb-4"
               />
