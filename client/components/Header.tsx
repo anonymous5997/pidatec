@@ -8,8 +8,8 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-gradient-to-r from-white via-white to-pidatec-purple/5 backdrop-blur-xl border-b border-pidatec-turquoise/10 shadow-lg">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 py-5 flex items-center justify-between">
+    <header className="sticky top-0 z-50 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 backdrop-blur-xl border-b border-rose-400/20 shadow-lg">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 py-3 flex items-center justify-between">
         {/* Logo */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
@@ -18,11 +18,11 @@ export default function Header() {
           className="flex items-center gap-2"
         >
           <div className="relative group">
-            <div className="absolute inset-0 bg-gradient-to-r from-pidatec-turquoise to-pidatec-purple rounded-lg blur opacity-0 group-hover:opacity-100 transition-all duration-300" />
+            <div className="absolute inset-0 bg-gradient-to-r from-rose-400 to-rose-500 rounded-lg blur opacity-0 group-hover:opacity-75 transition-all duration-300" />
             <img
-              src="https://cdn.builder.io/api/v1/image/assets%2F172b15ac9718458aa01c370ab6e1a4cf%2Fe25ac19c5d9a473897e40d7873f5ae20?format=webp&width=800"
+              src="https://cdn.builder.io/api/v1/image/assets%2F172b15ac9718458aa01c370ab6e1a4cf%2F0ae509ce36f74a448d3e1cd12c31934e?format=webp&width=800"
               alt="Pidatec Logo"
-              className="relative h-14 w-auto p-1 bg-white rounded-lg"
+              className="relative h-14 w-auto rounded-lg"
             />
           </div>
         </motion.div>
