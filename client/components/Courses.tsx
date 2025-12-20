@@ -48,6 +48,8 @@ const courses = [
 ];
 
 export default function Courses() {
+  const navigate = useNavigate();
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
