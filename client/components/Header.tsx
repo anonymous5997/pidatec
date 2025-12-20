@@ -38,8 +38,8 @@ export default function Header() {
             <motion.a
               key={link.label}
               href={link.href}
-              whileHover={{ color: "#40Bf8A" }}
-              className="text-gray-700 font-poppins font-medium text-sm transition-colors duration-300 hover:text-pidatec-turquoise"
+              whileHover={{ color: "#fb7185" }}
+              className="text-gray-200 font-poppins font-medium text-sm transition-colors duration-300 hover:text-rose-400"
             >
               {link.label}
             </motion.a>
@@ -54,9 +54,9 @@ export default function Header() {
           className="flex items-center gap-4"
         >
           <motion.button
-            whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(64, 191, 138, 0.3)" }}
+            whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(251, 113, 133, 0.4)" }}
             whileTap={{ scale: 0.95 }}
-            className="hidden sm:flex px-6 py-2 bg-gradient-to-r from-pidatec-turquoise to-pidatec-purple text-white font-bold font-poppins rounded-lg transition-all duration-300 text-sm shadow-md hover:shadow-lg"
+            className="hidden sm:flex px-6 py-2 bg-gradient-to-r from-rose-400 to-rose-500 text-white font-bold font-poppins rounded-lg transition-all duration-300 text-sm shadow-md hover:shadow-lg"
           >
             Get Started
           </motion.button>
