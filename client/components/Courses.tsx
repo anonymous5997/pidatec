@@ -122,8 +122,9 @@ export default function Courses() {
 
                 {/* Learn More Button */}
                 <motion.button
+                  onClick={() => navigate(`/course/${course.id}`)}
                   whileHover={{ x: 5 }}
-                  className="flex items-center gap-2 text-pidatec-turquoise font-bold font-poppins hover:gap-4 transition-all duration-300"
+                  className="flex items-center gap-2 text-rose-400 font-bold font-poppins hover:gap-4 transition-all duration-300"
                 >
                   Learn More
                   <ArrowRight className="w-5 h-5" />
