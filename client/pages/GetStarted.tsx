@@ -74,6 +74,15 @@ export default function GetStarted() {
         className="bg-gradient-to-r from-slate-900 to-slate-800 text-white py-16 px-6 md:px-12"
       >
         <div className="max-w-7xl mx-auto">
+          <motion.button
+            onClick={() => navigate("/")}
+            whileHover={{ x: -5 }}
+            className="flex items-center gap-2 text-rose-400 hover:text-rose-300 mb-8 font-poppins font-medium transition-colors"
+          >
+            <ArrowLeft className="w-5 h-5" />
+            Back to Home
+          </motion.button>
+
           <motion.h1
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
