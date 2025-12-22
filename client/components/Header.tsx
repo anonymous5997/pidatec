@@ -41,7 +41,7 @@ export default function Header() {
           </div>
         </motion.div>
 
-        {/* Navigation */}
+        {/* Desktop Navigation */}
         <motion.nav
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -49,16 +49,26 @@ export default function Header() {
           className="hidden md:flex items-center gap-8"
         >
           {navLinks.map((link) => (
-            <motion.a
+            <motion.button
               key={link.label}
-              href={link.href}
+              onClick={() => handleNavClick(link.href)}
               whileHover={{ color: "#fb7185" }}
               className="text-gray-200 font-poppins font-medium text-sm transition-colors duration-300 hover:text-rose-400"
             >
               {link.label}
-            </motion.a>
+            </motion.button>
           ))}
         </motion.nav>
+
+        {/* Mobile Menu Button */}
+        <motion.button
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="md:hidden p-2 text-gray-200 hover:text-rose-400 transition-colors"
+        >
+          {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        </motion.button>
 
         {/* CTA Button */}
         <motion.div
