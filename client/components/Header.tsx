@@ -75,18 +75,50 @@ export default function Header() {
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="flex items-center gap-4"
+          className="hidden sm:flex items-center gap-4"
         >
           <motion.button
             onClick={() => navigate("/get-started")}
             whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(251, 113, 133, 0.4)" }}
             whileTap={{ scale: 0.95 }}
-            className="hidden sm:flex px-6 py-2 bg-gradient-to-r from-rose-400 to-rose-500 text-white font-bold font-poppins rounded-lg transition-all duration-300 text-sm shadow-md hover:shadow-lg"
+            className="px-6 py-2 bg-gradient-to-r from-rose-400 to-rose-500 text-white font-bold font-poppins rounded-lg transition-all duration-300 text-sm shadow-md hover:shadow-lg"
           >
             Get Started
           </motion.button>
         </motion.div>
       </div>
+
+      {/* Mobile Menu */}
+      <motion.div
+        initial={{ opacity: 0, height: 0 }}
+        animate={isMenuOpen ? { opacity: 1, height: "auto" } : { opacity: 0, height: 0 }}
+        transition={{ duration: 0.3 }}
+        className="md:hidden overflow-hidden bg-gradient-to-r from-[#23112F] to-[#2A1538] border-t border-[#2A1538]"
+      >
+        <div className="px-6 py-4 space-y-3">
+          {navLinks.map((link) => (
+            <motion.button
+              key={link.label}
+              onClick={() => handleNavClick(link.href)}
+              whileHover={{ x: 5, color: "#fb7185" }}
+              className="block w-full text-left px-4 py-2 text-gray-200 font-poppins font-medium rounded-lg hover:bg-[#160B23] hover:text-rose-400 transition-all duration-300"
+            >
+              {link.label}
+            </motion.button>
+          ))}
+          <motion.button
+            onClick={() => {
+              setIsMenuOpen(false);
+              navigate("/get-started");
+            }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="w-full mt-2 px-6 py-2 bg-gradient-to-r from-rose-400 to-rose-500 text-white font-bold font-poppins rounded-lg transition-all duration-300 text-sm shadow-md hover:shadow-lg"
+          >
+            Get Started
+          </motion.button>
+        </div>
+      </motion.div>
     </header>
   );
 }
