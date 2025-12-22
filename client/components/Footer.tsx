@@ -91,8 +91,8 @@ export default function Footer() {
                 <li key={link}>
                   <motion.a
                     href="#"
-                    whileHover={{ x: 5, color: "#40Bf8A" }}
-                    className="text-gray-300 hover:text-pidatec-turquoise font-poppins transition-colors duration-300"
+                    whileHover={{ x: 5, color: "#fb7185" }}
+                    className="text-gray-300 hover:text-rose-400 font-poppins transition-colors duration-300"
                   >
                     {link}
                   </motion.a>
@@ -111,8 +111,8 @@ export default function Footer() {
                 <li key={policy}>
                   <motion.a
                     href="#"
-                    whileHover={{ x: 5, color: "#40Bf8A" }}
-                    className="text-gray-300 hover:text-pidatec-turquoise font-poppins transition-colors duration-300"
+                    whileHover={{ x: 5, color: "#fb7185" }}
+                    className="text-gray-300 hover:text-rose-400 font-poppins transition-colors duration-300"
                   >
                     {policy}
                   </motion.a>
