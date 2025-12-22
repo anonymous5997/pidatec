@@ -129,25 +129,25 @@ export default function Footer() {
             <div className="space-y-4">
               <motion.div
                 whileHover={{ x: 5 }}
-                className="flex items-center gap-3 text-gray-300 hover:text-pidatec-turquoise transition-colors duration-300 cursor-pointer"
+                className="flex items-center gap-3 text-gray-300 hover:text-rose-400 transition-colors duration-300 cursor-pointer"
               >
-                <Mail className="w-5 h-5 flex-shrink-0 text-pidatec-turquoise" />
+                <Mail className="w-5 h-5 flex-shrink-0 text-rose-400" />
                 <span className="font-poppins">hello@pidatec.com</span>
               </motion.div>
 
               <motion.div
                 whileHover={{ x: 5 }}
-                className="flex items-center gap-3 text-gray-300 hover:text-pidatec-turquoise transition-colors duration-300 cursor-pointer"
+                className="flex items-center gap-3 text-gray-300 hover:text-rose-400 transition-colors duration-300 cursor-pointer"
               >
-                <Phone className="w-5 h-5 flex-shrink-0 text-pidatec-turquoise" />
+                <Phone className="w-5 h-5 flex-shrink-0 text-rose-400" />
                 <span className="font-poppins">+1 (555) 123-4567</span>
               </motion.div>
 
               <motion.div
                 whileHover={{ x: 5 }}
-                className="flex items-start gap-3 text-gray-300 hover:text-pidatec-turquoise transition-colors duration-300 cursor-pointer"
+                className="flex items-start gap-3 text-gray-300 hover:text-rose-400 transition-colors duration-300 cursor-pointer"
               >
-                <MapPin className="w-5 h-5 flex-shrink-0 text-pidatec-turquoise mt-1" />
+                <MapPin className="w-5 h-5 flex-shrink-0 text-rose-400 mt-1" />
                 <span className="font-poppins">
                   123 Tech Avenue, San Francisco, CA 94105
                 </span>
