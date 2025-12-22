@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 export default function Header() {
+  const navigate = useNavigate();
+
   const navLinks = [
     { label: "Courses", href: "#courses" },
     { label: "Why Us", href: "#why-us" },
