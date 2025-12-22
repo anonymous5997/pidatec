@@ -157,7 +157,7 @@ export default function Footer() {
         </motion.div>
 
         {/* Divider */}
-        <div className="h-px bg-gradient-to-r from-transparent via-pidatec-turquoise to-transparent mb-8" />
+        <div className="h-px bg-gradient-to-r from-transparent via-rose-400 to-transparent mb-8" />
 
         {/* Bottom footer */}
         <motion.div
