@@ -116,9 +116,12 @@ export default function Hero() {
         >
           {/* Primary Button */}
           <motion.button
-            whileHover={{ scale: 1.05 }}
+            whileHover={{
+              scale: 1.08,
+              boxShadow: "0 20px 40px rgba(251, 113, 133, 0.5)"
+            }}
             whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 bg-pidatec-yellow text-pidatec-purple font-bold font-poppins rounded-lg transition-all duration-300 hover:bg-pidatec-orange shadow-lg hover:shadow-2xl"
+            className="px-8 py-4 bg-gradient-to-r from-rose-400 to-rose-500 text-white font-bold font-poppins rounded-lg transition-all duration-300 shadow-lg"
           >
             Start Learning
           </motion.button>
@@ -131,9 +134,12 @@ export default function Hero() {
                 coursesSection.scrollIntoView({ behavior: "smooth" });
               }
             }}
-            whileHover={{ scale: 1.05 }}
+            whileHover={{
+              scale: 1.08,
+              boxShadow: "0 20px 40px rgba(251, 113, 133, 0.4)"
+            }}
             whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 border-2 border-pidatec-turquoise text-pidatec-turquoise font-bold font-poppins rounded-lg transition-all duration-300 hover:bg-pidatec-turquoise hover:text-pidatec-purple"
+            className="px-8 py-4 border-2 border-rose-400 text-rose-400 font-bold font-poppins rounded-lg transition-all duration-300 hover:bg-rose-400 hover:text-white"
           >
             Explore Courses
           </motion.button>
