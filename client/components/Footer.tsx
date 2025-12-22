@@ -72,7 +72,7 @@ export default function Footer() {
                   <motion.button
                     key={social.label}
                     whileHover={{ scale: 1.2, rotate: 5 }}
-                    className="p-2 rounded-full bg-pidatec-turquoise/20 hover:bg-pidatec-pink text-pidatec-turquoise hover:text-white transition-all duration-300"
+                    className="p-2 rounded-full bg-rose-400/20 hover:bg-rose-400 text-rose-400 hover:text-white transition-all duration-300"
                   >
                     <Icon className="w-5 h-5" />
                   </motion.button>
