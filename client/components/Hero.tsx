@@ -37,21 +37,41 @@ export default function Hero() {
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
       />
 
-      {/* Floating particles */}
+      {/* Floating particles with enhanced animations */}
       <motion.div
-        className="particle absolute top-10 left-10 w-64 h-64 bg-pidatec-turquoise rounded-full mix-blend-multiply filter blur-3xl opacity-20"
-        animate={{ y: [0, -10, 0] }}
-        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+        className="particle absolute top-10 left-10 w-64 h-64 bg-rose-400 rounded-full mix-blend-screen filter blur-3xl opacity-30"
+        animate={{
+          y: [0, -20, 0],
+          x: [0, 10, 0],
+          scale: [1, 1.2, 1]
+        }}
+        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
-        className="particle absolute -bottom-20 right-10 w-96 h-96 bg-pidatec-yellow rounded-full mix-blend-multiply filter blur-3xl opacity-20"
-        animate={{ y: [0, -10, 0] }}
-        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.7 }}
+        className="particle absolute -bottom-20 right-10 w-96 h-96 bg-purple-500 rounded-full mix-blend-screen filter blur-3xl opacity-25"
+        animate={{
+          y: [0, -15, 0],
+          x: [0, -10, 0],
+          scale: [1, 1.15, 1]
+        }}
+        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.7 }}
       />
       <motion.div
-        className="particle absolute top-1/2 left-1/3 w-80 h-80 bg-pidatec-pink rounded-full mix-blend-multiply filter blur-3xl opacity-10"
-        animate={{ y: [0, -10, 0] }}
-        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1.4 }}
+        className="particle absolute top-1/2 left-1/3 w-80 h-80 bg-rose-300 rounded-full mix-blend-screen filter blur-3xl opacity-20"
+        animate={{
+          y: [0, -25, 0],
+          scale: [1, 1.1, 1]
+        }}
+        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1.4 }}
+      />
+      <motion.div
+        className="particle absolute top-1/3 right-1/4 w-72 h-72 bg-violet-400 rounded-full mix-blend-screen filter blur-3xl opacity-15"
+        animate={{
+          y: [0, 20, 0],
+          x: [0, 15, 0],
+          rotate: [0, 360]
+        }}
+        transition={{ duration: 8, repeat: Infinity, ease: "linear", delay: 2 }}
       />
 
       {/* Content */}
