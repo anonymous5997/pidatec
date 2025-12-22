@@ -77,13 +77,25 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 text-center text-white px-6 max-w-4xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0, y: 20, scale: 0.9 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <h1 className="text-5xl md:text-7xl font-bold font-montserrat mb-6 leading-tight">
+          <motion.h1
+            className="text-5xl md:text-7xl font-bold font-montserrat mb-6 leading-tight"
+            initial={{ backgroundPosition: "200% center" }}
+            animate={{ backgroundPosition: "0% center" }}
+            transition={{ duration: 2, ease: "easeInOut" }}
+            style={{
+              backgroundImage: "linear-gradient(90deg, #fb7185, #ffffff, #fb7185)",
+              backgroundSize: "200% auto",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+            }}
+          >
             Build the Future with Pidatec
-          </h1>
+          </motion.h1>
         </motion.div>
 
         <motion.div
@@ -91,7 +103,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <p className="text-lg md:text-2xl font-poppins mb-12 opacity-95 leading-relaxed">
+          <p className="text-lg md:text-2xl font-poppins mb-12 opacity-90 leading-relaxed text-gray-100">
             Industry-driven technology training for tomorrow's innovators.
           </p>
         </motion.div>
