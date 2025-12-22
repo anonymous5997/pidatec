@@ -27,8 +27,15 @@ export default function Hero() {
       ref={containerRef}
       className="relative w-full min-h-screen overflow-hidden flex items-center justify-center"
     >
-      {/* Animated gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-pidatec-purple via-pidatec-pink to-pidatec-orange opacity-90" />
+      {/* Animated gradient background with custom colors */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#1B0F2A] via-[#23112F] to-[#2A1538] opacity-100" />
+
+      {/* Animated overlay gradient */}
+      <motion.div
+        className="absolute inset-0 bg-gradient-to-tr from-purple-600/20 via-transparent to-rose-400/20"
+        animate={{ opacity: [0.3, 0.6, 0.3] }}
+        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+      />
 
       {/* Floating particles */}
       <motion.div
