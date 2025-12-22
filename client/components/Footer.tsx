@@ -41,7 +41,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-gradient-to-r from-slate-900 to-slate-800 text-white py-16 px-6 md:px-12 border-t border-rose-400/20">
+    <footer className="bg-gradient-to-r from-[#1B0F2A] via-[#23112F] to-[#2A1538] text-white py-16 px-6 md:px-12 border-t border-[#2A1538]">
       <div className="max-w-7xl mx-auto">
         {/* Main footer content */}
         <motion.div
