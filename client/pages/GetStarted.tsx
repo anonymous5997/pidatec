@@ -13,6 +13,7 @@ const courses = [
 ];
 
 export default function GetStarted() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
