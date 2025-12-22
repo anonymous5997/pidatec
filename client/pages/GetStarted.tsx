@@ -24,11 +24,15 @@ export default function GetStarted() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
@@ -38,10 +42,10 @@ export default function GetStarted() {
 
     try {
       // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise((resolve) => setTimeout(resolve, 1000));
       setSubmitted(true);
       setFormData({ name: "", email: "", phone: "", course: "", message: "" });
-      
+
       // Reset success message after 5 seconds
       setTimeout(() => setSubmitted(false), 5000);
     } catch (error) {
@@ -55,13 +59,13 @@ export default function GetStarted() {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.1, delayChildren: 0.2 }
-    }
+      transition: { staggerChildren: 0.1, delayChildren: 0.2 },
+    },
   };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
   };
 
   return (
@@ -128,8 +132,10 @@ export default function GetStarted() {
                   </h3>
                 </div>
                 <p className="text-gray-600 font-poppins leading-relaxed">
-                  Pidatec Training Center<br />
-                  Bhubaneswar, Odisha<br />
+                  Pidatec Training Center
+                  <br />
+                  Bhubaneswar, Odisha
+                  <br />
                   India
                 </p>
               </motion.div>
@@ -148,12 +154,18 @@ export default function GetStarted() {
                   </h3>
                 </div>
                 <p className="text-gray-600 font-poppins">
-                  <a href="tel:+91-674-2345678" className="hover:text-rose-400 transition-colors">
+                  <a
+                    href="tel:+91-674-2345678"
+                    className="hover:text-rose-400 transition-colors"
+                  >
                     +91-674-2345678
                   </a>
                 </p>
                 <p className="text-gray-600 font-poppins">
-                  <a href="tel:+91-9876543210" className="hover:text-rose-400 transition-colors">
+                  <a
+                    href="tel:+91-9876543210"
+                    className="hover:text-rose-400 transition-colors"
+                  >
                     +91-9876543210
                   </a>
                 </p>
@@ -173,12 +185,18 @@ export default function GetStarted() {
                   </h3>
                 </div>
                 <p className="text-gray-600 font-poppins">
-                  <a href="mailto:info@pidatec.com" className="hover:text-rose-400 transition-colors">
+                  <a
+                    href="mailto:info@pidatec.com"
+                    className="hover:text-rose-400 transition-colors"
+                  >
                     info@pidatec.com
                   </a>
                 </p>
                 <p className="text-gray-600 font-poppins">
-                  <a href="mailto:support@pidatec.com" className="hover:text-rose-400 transition-colors">
+                  <a
+                    href="mailto:support@pidatec.com"
+                    className="hover:text-rose-400 transition-colors"
+                  >
                     support@pidatec.com
                   </a>
                 </p>
@@ -203,12 +221,13 @@ export default function GetStarted() {
                     Thank You!
                   </h3>
                   <p className="text-xl text-gray-600 font-poppins text-center mb-8">
-                    Thank you for submitting your query. We will get back to you soon!
+                    Thank you for submitting your query. We will get back to you
+                    soon!
                   </p>
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    onClick={() => window.location.href = "/"}
+                    onClick={() => (window.location.href = "/")}
                     className="px-8 py-2 bg-gradient-to-r from-rose-400 to-rose-500 text-white font-bold font-poppins rounded-lg hover:shadow-lg transition-all"
                   >
                     Back to Home

@@ -43,7 +43,7 @@ export default function Hero() {
         animate={{
           y: [0, -20, 0],
           x: [0, 10, 0],
-          scale: [1, 1.2, 1]
+          scale: [1, 1.2, 1],
         }}
         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -52,24 +52,34 @@ export default function Hero() {
         animate={{
           y: [0, -15, 0],
           x: [0, -10, 0],
-          scale: [1, 1.15, 1]
+          scale: [1, 1.15, 1],
         }}
-        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.7 }}
+        transition={{
+          duration: 5,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 0.7,
+        }}
       />
       <motion.div
         className="particle absolute top-1/2 left-1/3 w-80 h-80 bg-rose-300 rounded-full mix-blend-screen filter blur-3xl opacity-20"
         animate={{
           y: [0, -25, 0],
-          scale: [1, 1.1, 1]
+          scale: [1, 1.1, 1],
         }}
-        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1.4 }}
+        transition={{
+          duration: 6,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 1.4,
+        }}
       />
       <motion.div
         className="particle absolute top-1/3 right-1/4 w-72 h-72 bg-violet-400 rounded-full mix-blend-screen filter blur-3xl opacity-15"
         animate={{
           y: [0, 20, 0],
           x: [0, 15, 0],
-          rotate: [0, 360]
+          rotate: [0, 360],
         }}
         transition={{ duration: 8, repeat: Infinity, ease: "linear", delay: 2 }}
       />
@@ -87,7 +97,8 @@ export default function Hero() {
             animate={{ backgroundPosition: "0% center" }}
             transition={{ duration: 2, ease: "easeInOut" }}
             style={{
-              backgroundImage: "linear-gradient(90deg, #fb7185, #ffffff, #fb7185)",
+              backgroundImage:
+                "linear-gradient(90deg, #fb7185, #ffffff, #fb7185)",
               backgroundSize: "200% auto",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
@@ -118,7 +129,7 @@ export default function Hero() {
           <motion.button
             whileHover={{
               scale: 1.08,
-              boxShadow: "0 20px 40px rgba(251, 113, 133, 0.5)"
+              boxShadow: "0 20px 40px rgba(251, 113, 133, 0.5)",
             }}
             whileTap={{ scale: 0.95 }}
             className="px-8 py-4 bg-gradient-to-r from-rose-400 to-rose-500 text-white font-bold font-poppins rounded-lg transition-all duration-300 shadow-lg"
@@ -136,7 +147,7 @@ export default function Hero() {
             }}
             whileHover={{
               scale: 1.08,
-              boxShadow: "0 20px 40px rgba(251, 113, 133, 0.4)"
+              boxShadow: "0 20px 40px rgba(251, 113, 133, 0.4)",
             }}
             whileTap={{ scale: 0.95 }}
             className="px-8 py-4 border-2 border-rose-400 text-rose-400 font-bold font-poppins rounded-lg transition-all duration-300 hover:bg-rose-400 hover:text-white"
@@ -153,7 +164,9 @@ export default function Hero() {
         transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
       >
         <div className="text-center">
-          <p className="text-rose-400 text-sm font-poppins font-semibold mb-2">Scroll to explore</p>
+          <p className="text-rose-400 text-sm font-poppins font-semibold mb-2">
+            Scroll to explore
+          </p>
           <motion.div
             animate={{ opacity: [0.5, 1, 0.5] }}
             transition={{ duration: 2, repeat: Infinity }}

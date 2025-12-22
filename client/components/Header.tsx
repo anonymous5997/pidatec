@@ -67,7 +67,11 @@ export default function Header() {
           whileTap={{ scale: 0.95 }}
           className="md:hidden p-2 text-gray-200 hover:text-rose-400 transition-colors"
         >
-          {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          {isMenuOpen ? (
+            <X className="w-6 h-6" />
+          ) : (
+            <Menu className="w-6 h-6" />
+          )}
         </motion.button>
 
         {/* CTA Button */}
@@ -79,7 +83,10 @@ export default function Header() {
         >
           <motion.button
             onClick={() => navigate("/get-started")}
-            whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(251, 113, 133, 0.4)" }}
+            whileHover={{
+              scale: 1.05,
+              boxShadow: "0 10px 30px rgba(251, 113, 133, 0.4)",
+            }}
             whileTap={{ scale: 0.95 }}
             className="px-6 py-2 bg-gradient-to-r from-rose-400 to-rose-500 text-white font-bold font-poppins rounded-lg transition-all duration-300 text-sm shadow-md hover:shadow-lg"
           >
@@ -91,7 +98,11 @@ export default function Header() {
       {/* Mobile Menu */}
       <motion.div
         initial={{ opacity: 0, height: 0 }}
-        animate={isMenuOpen ? { opacity: 1, height: "auto" } : { opacity: 0, height: 0 }}
+        animate={
+          isMenuOpen
+            ? { opacity: 1, height: "auto" }
+            : { opacity: 0, height: 0 }
+        }
         transition={{ duration: 0.3 }}
         className="md:hidden overflow-hidden bg-gradient-to-r from-[#23112F] to-[#2A1538] border-t border-[#2A1538]"
       >
