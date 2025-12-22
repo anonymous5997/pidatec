@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
 
 export default function Header() {
   const navigate = useNavigate();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
     { label: "Courses", href: "#courses" },
@@ -10,8 +13,16 @@ export default function Header() {
     { label: "Testimonials", href: "#testimonials" },
   ];
 
+  const handleNavClick = (href: string) => {
+    setIsMenuOpen(false);
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <header className="sticky top-0 z-50 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 backdrop-blur-xl border-b border-rose-400/20 shadow-lg">
+    <header className="sticky top-0 z-50 bg-gradient-to-r from-[#1B0F2A] via-[#23112F] to-[#2A1538] backdrop-blur-xl border-b border-[#2A1538] shadow-lg">
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-3 flex items-center justify-between">
         {/* Logo */}
         <motion.div
