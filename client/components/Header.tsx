@@ -57,6 +57,7 @@ export default function Header() {
           className="flex items-center gap-4"
         >
           <motion.button
+            onClick={() => navigate("/get-started")}
             whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(251, 113, 133, 0.4)" }}
             whileTap={{ scale: 0.95 }}
             className="hidden sm:flex px-6 py-2 bg-gradient-to-r from-rose-400 to-rose-500 text-white font-bold font-poppins rounded-lg transition-all duration-300 text-sm shadow-md hover:shadow-lg"
