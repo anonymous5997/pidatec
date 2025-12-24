@@ -1,108 +1,107 @@
 import { motion } from "framer-motion";
 
 export default function About() {
-  const containerVariants = {
+  const container = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.1,
-      },
+      transition: { staggerChildren: 0.15 },
     },
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 },
-    },
+  const item = {
+    hidden: { opacity: 0, y: 24 },
+    visible: { opacity: 1, y: 0 },
   };
 
   return (
-    <section className="py-20 px-6 md:px-12 bg-white">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Left side - Image */}
+    <section className="bg-white py-20 px-6 md:px-12">
+      <div className="mx-auto max-w-6xl">
+        <div className="grid md:grid-cols-2 gap-14 items-center">
+          {/* LEFT: LOGO CARD */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -60 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.9, ease: "easeOut" }}
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="bg-gradient-to-br from-pidatec-turquoise to-pidatec-purple rounded-2xl overflow-hidden shadow-2xl aspect-square flex items-center justify-center">
-              <div className="text-6xl text-white opacity-20">
-                <svg
-                  className="w-48 h-48"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" />
-                </svg>
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-br from-pidatec-turquoise/20 to-pidatec-orange/20" />
+            <div className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-pidatec-turquoise to-pidatec-purple">
+              <motion.img
+                src="/assets/pidatec-logo.jpg"
+                alt="Pidatec Logo"
+                animate={{ opacity: [0.94, 1, 0.94] }}
+                transition={{
+                  duration: 6,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                className="h-full w-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black/10" />
             </div>
 
-            {/* Decorative bars */}
             <motion.div
               initial={{ width: 0 }}
               whileInView={{ width: "100%" }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              transition={{ duration: 1, delay: 0.3 }}
               viewport={{ once: true }}
-              className="absolute -bottom-4 -left-4 h-2 bg-gradient-to-r from-pidatec-turquoise to-pidatec-pink rounded"
+              className="absolute -bottom-3 left-0 h-2 rounded bg-gradient-to-r from-pidatec-turquoise via-pidatec-pink to-pidatec-orange"
             />
           </motion.div>
 
-          {/* Right side - Text */}
+          {/* RIGHT: TEXT CONTENT */}
           <motion.div
-            variants={containerVariants}
+            variants={container}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <motion.div variants={itemVariants}>
-              <h2 className="text-4xl md:text-5xl font-bold font-montserrat text-pidatec-purple mb-4">
-                Empowering careers through hands-on tech education
-              </h2>
-            </motion.div>
-
-            <motion.div variants={itemVariants} className="space-y-4">
-              <p className="text-gray-600 text-lg font-poppins leading-relaxed">
-                At Pidatec, we believe in the power of education to transform careers and communities. Our mission is to provide industry-relevant training that bridges the gap between academic knowledge and real-world application.
-              </p>
-
-              <p className="text-gray-600 text-lg font-poppins leading-relaxed">
-                With expert instructors, cutting-edge curriculum, and hands-on projects, we prepare you for the challenges and opportunities of tomorrow's tech landscape.
-              </p>
-            </motion.div>
-
-            <motion.div
-              variants={itemVariants}
-              className="flex items-center gap-4 pt-6"
+            {/* ✅ GRADIENT HEADING */}
+            <motion.h2
+              variants={item}
+              className="text-4xl md:text-5xl font-bold font-montserrat leading-tight
+                         bg-gradient-to-r from-pidatec-purple via-pidatec-pink to-pidatec-orange
+                         bg-clip-text text-transparent"
             >
-              <div className="w-1 h-12 bg-gradient-to-b from-pidatec-turquoise to-pidatec-pink rounded" />
-              <div>
-                <p className="font-bold text-2xl text-pidatec-purple font-montserrat">
-                  10,000+
-                </p>
-                <p className="text-gray-600">Students Trained</p>
+              Empowering careers through hands-on tech education
+            </motion.h2>
+
+            <motion.p
+              variants={item}
+              className="text-lg font-poppins text-slate-600 leading-relaxed"
+            >
+              At Pidatec, we believe in the power of education to transform careers
+              and communities. Our mission is to provide industry-relevant training
+              that bridges the gap between academic knowledge and real-world
+              application.
+            </motion.p>
+
+            <motion.p
+              variants={item}
+              className="text-lg font-poppins text-slate-600 leading-relaxed"
+            >
+              With expert instructors, cutting-edge curriculum, and hands-on
+              projects, we prepare you for the challenges and opportunities of
+              tomorrow&apos;s tech landscape.
+            </motion.p>
+
+            <motion.div variants={item} className="flex gap-12 pt-6">
+              <div className="flex items-center gap-4">
+                <div className="h-12 w-1 rounded bg-gradient-to-b from-pidatec-turquoise to-pidatec-pink" />
+                <div>
+                  <p className="text-2xl font-bold text-pidatec-purple">10,000+</p>
+                  <p className="text-sm text-gray-600">Students Trained</p>
+                </div>
               </div>
-            </motion.div>
 
-            <motion.div
-              variants={itemVariants}
-              className="flex items-center gap-4"
-            >
-              <div className="w-1 h-12 bg-gradient-to-b from-pidatec-orange to-pidatec-yellow rounded" />
-              <div>
-                <p className="font-bold text-2xl text-pidatec-purple font-montserrat">
-                  95%
-                </p>
-                <p className="text-gray-600">Job Placement Rate</p>
+              <div className="flex items-center gap-4">
+                <div className="h-12 w-1 rounded bg-gradient-to-b from-pidatec-orange to-pidatec-yellow" />
+                <div>
+                  <p className="text-2xl font-bold text-pidatec-purple">95%</p>
+                  <p className="text-sm text-gray-600">Job Placement Rate</p>
+                </div>
               </div>
             </motion.div>
           </motion.div>
