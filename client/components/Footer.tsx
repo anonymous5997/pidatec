@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import {
   Facebook,
   Twitter,
@@ -10,6 +11,8 @@ import {
 } from "lucide-react";
 
 export default function Footer() {
+  const navigate = useNavigate();
+
   const socialLinks = [
     { icon: Facebook, label: "Facebook" },
     { icon: Twitter, label: "Twitter" },
@@ -18,15 +21,20 @@ export default function Footer() {
   ];
 
   const quickLinks = [
-    "About Us",
-    "Courses",
-    "Instructors",
-    "Testimonials",
-    "Blog",
-    "Contact",
+    { label: "About Us", path: "/about" },
+    { label: "Courses", path: "/?section=courses" },
+    { label: "Instructors", path: "/instructors" },
+    { label: "Testimonials", path: "/?section=testimonials" },
+    { label: "Blog", path: "/blog" },
+    { label: "Contact", path: "/contact" },
   ];
 
-  const policies = ["Privacy Policy", "Terms of Service", "FAQs", "Support"];
+  const policies = [
+    { label: "Privacy Policy", path: "/privacy-policy" },
+    { label: "Terms of Service", path: "/terms-of-service" },
+    { label: "FAQs", path: "/faqs" },
+    { label: "Support", path: "/support" },
+  ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -96,14 +104,14 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
-                <li key={link}>
-                  <motion.a
-                    href="#"
+                <li key={link.label}>
+                  <motion.button
+                    onClick={() => navigate(link.path)}
                     whileHover={{ x: 5, color: "#fb7185" }}
-                    className="text-gray-300 hover:text-rose-400 font-poppins transition-colors duration-300"
+                    className="text-gray-300 hover:text-rose-400 font-poppins transition-colors duration-300 text-left"
                   >
-                    {link}
-                  </motion.a>
+                    {link.label}
+                  </motion.button>
                 </li>
               ))}
             </ul>
@@ -116,14 +124,14 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3">
               {policies.map((policy) => (
-                <li key={policy}>
-                  <motion.a
-                    href="#"
+                <li key={policy.label}>
+                  <motion.button
+                    onClick={() => navigate(policy.path)}
                     whileHover={{ x: 5, color: "#fb7185" }}
-                    className="text-gray-300 hover:text-rose-400 font-poppins transition-colors duration-300"
+                    className="text-gray-300 hover:text-rose-400 font-poppins transition-colors duration-300 text-left"
                   >
-                    {policy}
-                  </motion.a>
+                    {policy.label}
+                  </motion.button>
                 </li>
               ))}
             </ul>
