@@ -129,6 +129,7 @@ export default function Hero() {
         >
           {/* Primary Button */}
           <motion.button
+            onClick={() => navigate("/get-started")}
             whileHover={{
               scale: 1.08,
               boxShadow: "0 20px 40px rgba(251, 113, 133, 0.5)",
