@@ -36,20 +36,45 @@ export default function GetStarted() {
     }));
   };
 
+  // ✅ UPDATED URL in handleSubmit
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
 
     try {
-      // Simulate form submission
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      setSubmitted(true);
-      setFormData({ name: "", email: "", phone: "", course: "", message: "" });
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbwKdpgctKbdE3ULDlCQ11oihQAZEbc_aStKPir59vEiF6kMNa6zjpkSvwr4hS42vKec0w/exec",
+        {
+          method: "POST",
+          // We use text/plain to avoid CORS preflight (OPTIONS) requests which Google Apps Script doesn't handle natively
+          headers: {
+            "Content-Type": "text/plain;charset=utf-8",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
-      // Reset success message after 5 seconds
-      setTimeout(() => setSubmitted(false), 5000);
+      const text = await response.text();
+      const result = JSON.parse(text);
+
+      if (result.success) {
+        setSubmitted(true);
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          course: "",
+          message: "",
+        });
+
+        setTimeout(() => setSubmitted(false), 5000);
+      } else {
+        alert("Submission failed. Please try again.");
+        console.error(result);
+      }
     } catch (error) {
       console.error("Error submitting form:", error);
+      alert("Network error. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -132,11 +157,11 @@ export default function GetStarted() {
                   </h3>
                 </div>
                 <p className="text-gray-600 font-poppins leading-relaxed">
-                  Pidatec Training Center
+                  E/4 , srashtha homes Raghunathpur
                   <br />
-                  Bhubaneswar, Odisha
+                  Bhubaneswar, 751024
                   <br />
-                  India
+                  Odisha , India
                 </p>
               </motion.div>
 
@@ -155,18 +180,10 @@ export default function GetStarted() {
                 </div>
                 <p className="text-gray-600 font-poppins">
                   <a
-                    href="tel:+91-674-2345678"
+                    href="tel:+91-9692595734"
                     className="hover:text-rose-400 transition-colors"
                   >
-                    +91-674-2345678
-                  </a>
-                </p>
-                <p className="text-gray-600 font-poppins">
-                  <a
-                    href="tel:+91-9876543210"
-                    className="hover:text-rose-400 transition-colors"
-                  >
-                    +91-9876543210
+                    +91 9692595734
                   </a>
                 </p>
               </motion.div>
@@ -186,18 +203,10 @@ export default function GetStarted() {
                 </div>
                 <p className="text-gray-600 font-poppins">
                   <a
-                    href="mailto:info@pidatec.com"
+                    href="mailto:ceo@pidatec.in"
                     className="hover:text-rose-400 transition-colors"
                   >
-                    info@pidatec.com
-                  </a>
-                </p>
-                <p className="text-gray-600 font-poppins">
-                  <a
-                    href="mailto:support@pidatec.com"
-                    className="hover:text-rose-400 transition-colors"
-                  >
-                    support@pidatec.com
+                    ceo@pidatec.in
                   </a>
                 </p>
               </motion.div>
