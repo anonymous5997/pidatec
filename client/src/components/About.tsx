@@ -67,11 +67,16 @@ export default function About() {
 
             <motion.div variants={itemVariants} className="space-y-4">
               <p className="text-gray-600 text-lg font-poppins leading-relaxed">
-                At Pidatec, we believe in the power of education to transform careers and communities. Our mission is to provide industry-relevant training that bridges the gap between academic knowledge and real-world application.
+                At Pidatec, we believe in the power of education to transform
+                careers and communities. Our mission is to provide
+                industry-relevant training that bridges the gap between academic
+                knowledge and real-world application.
               </p>
 
               <p className="text-gray-600 text-lg font-poppins leading-relaxed">
-                With expert instructors, cutting-edge curriculum, and hands-on projects, we prepare you for the challenges and opportunities of tomorrow's tech landscape.
+                With expert instructors, cutting-edge curriculum, and hands-on
+                projects, we prepare you for the challenges and opportunities of
+                tomorrow's tech landscape.
               </p>
             </motion.div>
 

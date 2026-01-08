@@ -30,7 +30,10 @@ export default function App() {
             <Route path="/" element={<Index />} />
             <Route path="/course/:courseId" element={<CourseDetail />} />
             <Route path="/get-started" element={<GetStarted />} />
-            <Route path="/contact" element={<Navigate to="/get-started" replace />} />
+            <Route
+              path="/contact"
+              element={<Navigate to="/get-started" replace />}
+            />
             <Route path="/about" element={<AboutUs />} />
             <Route path="/instructors" element={<Instructors />} />
             <Route path="/blog" element={<Blog />} />
