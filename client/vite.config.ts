@@ -10,7 +10,8 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: "dist",
+    outDir: "dist/spa",
+    emptyOutDir: true,
     sourcemap: false,
   },
   server: {
