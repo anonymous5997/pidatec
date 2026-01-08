@@ -6,11 +6,11 @@ export default defineConfig({
   plugins: [react()],
   build: {
     outDir: "dist/spa",
-    emptyOutDir: true
+    emptyOutDir: true,
   },
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src")
-    }
-  }
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
 });
