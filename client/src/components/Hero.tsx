@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
