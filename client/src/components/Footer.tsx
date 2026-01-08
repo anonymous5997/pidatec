@@ -26,7 +26,7 @@ export default function Footer() {
     { label: "Instructors", path: "/instructors" },
     { label: "Testimonials", path: "/?section=testimonials" },
     { label: "Blog", path: "/blog" },
-    { label: "Contact", path: "/contact" },
+    { label: "Contact", path: "/get-started" },
   ];
 
   const policies = [
