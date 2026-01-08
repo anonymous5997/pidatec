@@ -33,11 +33,11 @@ export default function About() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="bg-gradient-to-br from-pidatec-turquoise to-pidatec-purple rounded-2xl overflow-hidden shadow-2xl aspect-square flex items-center justify-center p-8">
+            <div className="bg-gradient-to-br from-pidatec-turquoise to-pidatec-purple rounded-2xl overflow-hidden shadow-2xl aspect-square flex items-center justify-center">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F172b15ac9718458aa01c370ab6e1a4cf%2F0ae509ce36f74a448d3e1cd12c31934e?format=webp&width=800"
                 alt="Pidatec Logo"
-                className="w-full h-full object-contain"
+                className="w-full h-full object-cover"
               />
             </div>
 
