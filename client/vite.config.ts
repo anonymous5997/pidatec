@@ -13,8 +13,8 @@ export default defineConfig({
   },
 
   build: {
-    outDir: "dist",   // 🔥 IMPORTANT
-    emptyOutDir: true
+    outDir: "dist",
+    emptyOutDir: true,
   },
 
   server: {
