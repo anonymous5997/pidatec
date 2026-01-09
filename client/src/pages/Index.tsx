@@ -11,13 +11,29 @@ export default function Index() {
   return (
     <>
       <Header />
+
       <main className="w-full">
         <Hero />
-      <About />
-      <Courses />
-      <WhyChoose />
-      <Testimonials />
-      <CTA />
+
+        <section id="about">
+          <About />
+        </section>
+
+        {/* Featured Courses */}
+        <section id="featured-courses">
+          <Courses />
+        </section>
+
+        <section id="why-choose">
+          <WhyChoose />
+        </section>
+
+        {/* Testimonials */}
+        <section id="testimonials">
+          <Testimonials />
+        </section>
+
+        <CTA />
         <Footer />
       </main>
     </>

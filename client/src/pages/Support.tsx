@@ -38,15 +38,15 @@ export default function Support() {
       icon: Mail,
       title: "Email Support",
       description: "Send us your queries and we'll respond within 24 hours",
-      contact: "support@pidatec.com",
-      link: "mailto:support@pidatec.com",
+      contact: "ceo@pidatec.in",
+      link: "mailto:ceo@pidatec.in",
     },
     {
       icon: Phone,
       title: "Phone Support",
       description: "Call us for immediate assistance during business hours",
-      contact: "+91-674-2345678",
-      link: "tel:+91-674-2345678",
+      contact: "+91 9692595734",
+      link: "tel:+91 9692595734",
     },
     {
       icon: MessageSquare,
@@ -59,8 +59,8 @@ export default function Support() {
       icon: Headphones,
       title: "Course Support",
       description: "Dedicated support for course-related technical issues",
-      contact: "coursehelp@pidatec.com",
-      link: "mailto:coursehelp@pidatec.com",
+      contact: "ceo@pidatec.in",
+      link: "mailto:ceo@pidatec.in",
     },
   ];
 

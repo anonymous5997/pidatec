@@ -11,7 +11,7 @@
     ]
   },
   "scripts": {
-    "dev": "cd client && npm run dev",
+    "dev": "vite",
     "build": "cd client && npm run build",
     "preview": "cd client && npm run preview",
     "typecheck": "cd client && npm run typecheck",

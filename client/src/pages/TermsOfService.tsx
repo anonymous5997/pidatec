@@ -56,7 +56,7 @@ export default function TermsOfService() {
               Terms of Service
             </h1>
             <p className="text-gray-400 font-poppins">
-              Last updated: January 2024
+              Last updated: January 2026
             </p>
           </motion.div>
 
@@ -100,7 +100,7 @@ export default function TermsOfService() {
             {
               title: "8. Contact Information",
               content:
-                "If you have any questions about these Terms of Service, please contact us at:\n\nEmail: support@pidatec.com\nPhone: +91-674-2345678\nAddress: Bhubaneswar, Odisha, India",
+                "If you have any questions about these Terms of Service, please contact us at:\n\nEmail: ceo@pidatec.in\nPhone: +91 9692595734 \nAddress: Bhubaneswar, Odisha, India",
             },
           ].map((section, index) => (
             <motion.div key={index} variants={itemVariants}>

@@ -22,9 +22,9 @@ export default function Footer() {
 
   const quickLinks = [
     { label: "About Us", path: "/about" },
-    { label: "Courses", path: "/?section=courses" },
+    { label: "Courses", path: "/#featured-courses" },
     { label: "Instructors", path: "/instructors" },
-    { label: "Testimonials", path: "/?section=testimonials" },
+    { label: "Testimonials", path: "/#testimonials" },
     { label: "Blog", path: "/blog" },
     { label: "Contact", path: "/get-started" },
   ];
@@ -148,7 +148,7 @@ export default function Footer() {
                 className="flex items-center gap-3 text-gray-300 hover:text-rose-400 transition-colors duration-300 cursor-pointer"
               >
                 <Mail className="w-5 h-5 flex-shrink-0 text-rose-400" />
-                <span className="font-poppins">hello@pidatec.com</span>
+                <span className="font-poppins">ceo@pidatec.in</span>
               </motion.div>
 
               <motion.div
@@ -156,7 +156,7 @@ export default function Footer() {
                 className="flex items-center gap-3 text-gray-300 hover:text-rose-400 transition-colors duration-300 cursor-pointer"
               >
                 <Phone className="w-5 h-5 flex-shrink-0 text-rose-400" />
-                <span className="font-poppins">+1 (555) 123-4567</span>
+                <span className="font-poppins">+91 96925 95734</span>
               </motion.div>
 
               <motion.div
@@ -165,7 +165,7 @@ export default function Footer() {
               >
                 <MapPin className="w-5 h-5 flex-shrink-0 text-rose-400 mt-1" />
                 <span className="font-poppins">
-                  123 Tech Avenue, San Francisco, CA 94105
+                  E/4 , srashtha homes , Raghunathpur , Bhubaneswar , 751024
                 </span>
               </motion.div>
             </div>
@@ -184,7 +184,7 @@ export default function Footer() {
           className="text-center text-gray-400 font-poppins"
         >
           <p>
-            © 2024 Pidatec. All rights reserved. Building the future, one skill
+            © 2026 Pidatec. All rights reserved. Building the future, one skill
             at a time.
           </p>
         </motion.div>
