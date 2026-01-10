@@ -20,13 +20,14 @@ export default function Footer() {
     { icon: Instagram, label: "Instagram" },
   ];
 
+  // ✅ Step 1: Updated structure for Smart Navigation
   const quickLinks = [
-    { label: "About Us", path: "/about" },
-    { label: "Courses", path: "/#featured-courses" },
-    { label: "Instructors", path: "/instructors" },
-    { label: "Testimonials", path: "/#testimonials" },
-    { label: "Blog", path: "/blog" },
-    { label: "Contact", path: "/get-started" },
+    { label: "About Us", type: "route", path: "/about" },
+    { label: "Courses", type: "scroll", target: "#featured-courses" },
+    { label: "Instructors", type: "route", path: "/instructors" },
+    { label: "Testimonials", type: "scroll", target: "#testimonials" },
+    { label: "Blog", type: "route", path: "/blog" },
+    { label: "Contact", type: "route", path: "/get-started" },
   ];
 
   const policies = [
@@ -35,6 +36,33 @@ export default function Footer() {
     { label: "FAQs", path: "/faqs" },
     { label: "Support", path: "/support" },
   ];
+
+  // ✅ Step 2: Smart Handler for Routes vs Scrolling
+  const handleFooterNav = (link: any) => {
+    // 1. Handle regular page routes
+    if (link.type === "route") {
+      navigate(link.path);
+      return;
+    }
+
+    // 2. Handle scroll anchors
+    if (link.type === "scroll") {
+      const el = document.querySelector(link.target);
+      
+      // If element exists on current page, scroll to it
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      } else {
+        // If element doesn't exist (we are on another page), go Home first
+        navigate("/");
+        // Wait for Home to mount, then find and scroll
+        setTimeout(() => {
+          const target = document.querySelector(link.target);
+          target?.scrollIntoView({ behavior: "smooth" });
+        }, 300);
+      }
+    }
+  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -106,7 +134,8 @@ export default function Footer() {
               {quickLinks.map((link) => (
                 <li key={link.label}>
                   <motion.button
-                    onClick={() => navigate(link.path)}
+                    // ✅ Step 3: Using the smart handler
+                    onClick={() => handleFooterNav(link)}
                     whileHover={{ x: 5, color: "#fb7185" }}
                     className="text-gray-300 hover:text-rose-400 font-poppins transition-colors duration-300 text-left"
                   >
