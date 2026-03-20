@@ -59,7 +59,7 @@ export default function Header() {
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2F172b15ac9718458aa01c370ab6e1a4cf%2F0ae509ce36f74a448d3e1cd12c31934e?format=webp&width=800"
               alt="Pidatec Logo"
-              className="relative h-16 sm:h-16 md:h-20 w-auto rounded-lg drop-shadow-lg"
+              className="relative h-20 sm:h-20 md:h-24 w-auto rounded-lg drop-shadow-lg"
             />
           </div>
         </motion.div>
