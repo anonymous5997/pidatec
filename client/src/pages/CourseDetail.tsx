@@ -12,8 +12,8 @@ const courseDetails: Record<number, any> = {
     level: "Intermediate",
     students: 1250,
     rating: 4.8,
-    instructor: "Sarah Chen",
-    price: "$499",
+    // instructor: "Sarah Chen",
+    // price: "$499",
     fullDescription: `Transform raw data into actionable insights with our comprehensive Data Analytics course. You'll learn to analyze complex datasets, create compelling visualizations, and drive business decisions with data-driven strategies. This course covers statistical methods, data manipulation, visualization tools, and real-world case studies.`,
     modules: [
       {
@@ -44,8 +44,8 @@ const courseDetails: Record<number, any> = {
     level: "Intermediate",
     students: 980,
     rating: 4.9,
-    instructor: "Michael Rodriguez",
-    price: "$599",
+    // instructor: "Michael Rodriguez",
+    // price: "$599",
     fullDescription: `Master cloud infrastructure and deployment with our Cloud Computing course. Learn to design, deploy, and manage scalable applications across AWS, Azure, and Google Cloud. This course covers cloud architecture, serverless computing, containerization, and production deployment strategies.`,
     modules: [
       {
@@ -76,8 +76,8 @@ const courseDetails: Record<number, any> = {
     level: "Advanced",
     students: 750,
     rating: 4.7,
-    instructor: "Dr. Priya Patel",
-    price: "$699",
+    // instructor: "Dr. Priya Patel",
+    // price: "$699",
     fullDescription: `Explore the cutting-edge world of Artificial Intelligence and Machine Learning. Build neural networks, implement deep learning models, and create intelligent applications. This comprehensive course covers supervised learning, unsupervised learning, deep learning, and real-world AI applications.`,
     modules: [
       {
@@ -108,8 +108,8 @@ const courseDetails: Record<number, any> = {
     level: "Intermediate",
     students: 860,
     rating: 4.8,
-    instructor: "James Wilson",
-    price: "$549",
+    // instructor: "James Wilson",
+    // price: "$549",
     fullDescription: `Secure your organization against threats with our comprehensive Cybersecurity course. Learn network security, cryptography, threat detection, and incident response. This course provides hands-on training in protecting systems, networks, and data from cyber attacks.`,
     modules: [
       {
@@ -140,8 +140,8 @@ const courseDetails: Record<number, any> = {
     level: "Beginner to Intermediate",
     students: 2100,
     rating: 4.9,
-    instructor: "Alex Kim",
-    price: "$449",
+    // instructor: "Alex Kim",
+    // price: "$449",
     fullDescription: `Become a full-stack developer by mastering both frontend and backend technologies. Learn to build responsive web applications, create robust APIs, and deploy production-ready software. This course covers modern frameworks, databases, and deployment strategies.`,
     modules: [
       {
@@ -172,8 +172,8 @@ const courseDetails: Record<number, any> = {
     level: "Intermediate",
     students: 640,
     rating: 4.7,
-    instructor: "Emma Thompson",
-    price: "$599",
+    // instructor: "Emma Thompson",
+    // price: "$599",
     fullDescription: `Build native and cross-platform mobile applications for iOS and Android. Learn mobile UI/UX design, native development, and popular frameworks. This course provides hands-on experience building apps from concept to deployment on app stores.`,
     modules: [
       {

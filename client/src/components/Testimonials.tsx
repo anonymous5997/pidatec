@@ -5,7 +5,7 @@ import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 const testimonials = [
   {
     id: 1,
-    name: "Sarah Johnson",
+    name: "R patra",
     role: "Senior Data Analyst",
     company: "Tech Corp",
     content:
@@ -15,7 +15,7 @@ const testimonials = [
   },
   {
     id: 2,
-    name: "Mike Chen",
+    name: "G kumar Ray",
     role: "Cloud Architect",
     company: "Cloud Solutions Inc",
     content:
@@ -25,7 +25,7 @@ const testimonials = [
   },
   {
     id: 3,
-    name: "Emma Davis",
+    name: "M pradhan",
     role: "Full-Stack Developer",
     company: "StartUp Hub",
     content:
@@ -35,7 +35,7 @@ const testimonials = [
   },
   {
     id: 4,
-    name: "Alex Rivera",
+    name: "P mohanty",
     role: "Cybersecurity Specialist",
     company: "Security First",
     content:

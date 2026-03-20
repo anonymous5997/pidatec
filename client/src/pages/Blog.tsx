@@ -42,7 +42,7 @@ export default function Blog() {
       excerpt:
         "Explore the essential AWS services and how to leverage them for building scalable cloud applications.",
       author: "Priya Sharma",
-      date: "January 3, 2024",
+      date: "October 3, 2025",
       category: "Cloud Computing",
       readTime: "7 min read",
     },
@@ -52,7 +52,7 @@ export default function Blog() {
       excerpt:
         "Discover emerging trends in AI and ML, and what they mean for the future of technology.",
       author: "Vikram Desai",
-      date: "December 28, 2023",
+      date: "December 28, 2025",
       category: "AI & ML",
       readTime: "8 min read",
     },
@@ -62,7 +62,7 @@ export default function Blog() {
       excerpt:
         "Essential security practices every full-stack developer should know to protect their applications.",
       author: "Neha Singh",
-      date: "December 25, 2023",
+      date: "December 25, 2025",
       category: "Cybersecurity",
       readTime: "6 min read",
     },
@@ -72,7 +72,7 @@ export default function Blog() {
       excerpt:
         "A comprehensive comparison of React and Vue to help you choose the best framework for your project.",
       author: "Amit Patel",
-      date: "December 20, 2023",
+      date: "December 20, 2025",
       category: "Web Development",
       readTime: "10 min read",
     },
@@ -82,7 +82,7 @@ export default function Blog() {
       excerpt:
         "Explore the latest trends in mobile development and tools that every mobile developer should know.",
       author: "Anjali Verma",
-      date: "December 15, 2023",
+      date: "December 15, 2025",
       category: "Mobile Development",
       readTime: "7 min read",
     },
