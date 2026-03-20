@@ -33,7 +33,7 @@ export default function About() {
             viewport={{ once: true }}
             className="relative flex justify-center md:justify-start"
           >
-            <div className="bg-gradient-to-br from-pidatec-turquoise to-pidatec-purple rounded-2xl overflow-hidden shadow-2xl w-full sm:h-96 md:h-full aspect-square flex items-center justify-center max-w-lg md:max-w-none">
+            <div className="bg-gradient-to-br from-pidatec-turquoise to-pidatec-purple rounded-2xl overflow-hidden shadow-2xl w-full h-80 sm:h-96 md:aspect-square md:h-auto flex items-center justify-center max-w-2xl sm:max-w-lg md:max-w-none">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F172b15ac9718458aa01c370ab6e1a4cf%2F0ae509ce36f74a448d3e1cd12c31934e?format=webp&width=800"
                 alt="Pidatec Logo"
