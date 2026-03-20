@@ -41,15 +41,21 @@ export default function Hero() {
 
       {/* Background P Logo */}
       <motion.div
-        className="absolute inset-0 flex items-center justify-center opacity-10 z-0"
+        className="absolute inset-0 flex items-center justify-center opacity-10 z-0 pointer-events-none"
         animate={{ scale: [1, 1.05, 1] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       >
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets%2F172b15ac9718458aa01c370ab6e1a4cf%2F0ae509ce36f74a448d3e1cd12c31934e?format=webp&width=800"
-          alt="Pidatec P Logo Background"
-          className="w-96 h-96 md:w-full md:h-full md:max-w-2xl object-contain filter drop-shadow-2xl"
-        />
+        <svg
+          viewBox="0 0 200 200"
+          className="w-80 h-80 md:w-96 md:h-96"
+          fill="currentColor"
+        >
+          <path
+            d="M60 20 L60 180 L100 180 C130 180 150 160 150 130 C150 100 130 80 100 80 L60 80 Z"
+            className="text-white"
+            fill="white"
+          />
+        </svg>
       </motion.div>
 
       {/* Floating particles with enhanced animations */}
