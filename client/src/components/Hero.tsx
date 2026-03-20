@@ -39,25 +39,6 @@ export default function Hero() {
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
       />
 
-      {/* Background P Logo */}
-      <motion.div
-        className="absolute inset-0 flex items-center justify-center opacity-10 z-0 pointer-events-none"
-        animate={{ scale: [1, 1.05, 1] }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-      >
-        <svg
-          viewBox="0 0 200 200"
-          className="w-80 h-80 md:w-96 md:h-96"
-          fill="currentColor"
-        >
-          <path
-            d="M60 20 L60 180 L100 180 C130 180 150 160 150 130 C150 100 130 80 100 80 L60 80 Z"
-            className="text-white"
-            fill="white"
-          />
-        </svg>
-      </motion.div>
-
       {/* Floating particles with enhanced animations */}
       <motion.div
         className="particle absolute top-10 left-10 w-64 h-64 bg-rose-400 rounded-full mix-blend-screen filter blur-3xl opacity-30"
