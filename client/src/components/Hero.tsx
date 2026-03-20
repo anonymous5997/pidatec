@@ -39,6 +39,19 @@ export default function Hero() {
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
       />
 
+      {/* Background P Logo */}
+      <motion.div
+        className="absolute inset-0 flex items-center justify-center opacity-10 z-0"
+        animate={{ scale: [1, 1.05, 1] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+      >
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets%2F172b15ac9718458aa01c370ab6e1a4cf%2F0ae509ce36f74a448d3e1cd12c31934e?format=webp&width=800"
+          alt="Pidatec P Logo Background"
+          className="w-96 h-96 md:w-full md:h-full md:max-w-2xl object-contain filter drop-shadow-2xl"
+        />
+      </motion.div>
+
       {/* Floating particles with enhanced animations */}
       <motion.div
         className="particle absolute top-10 left-10 w-64 h-64 bg-rose-400 rounded-full mix-blend-screen filter blur-3xl opacity-30"
